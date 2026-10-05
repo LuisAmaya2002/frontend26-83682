@@ -1,0 +1,14 @@
+<nav class="menu">
+  <span class="marca">{{ titulo }}</span>
+  <ul>
+    @for (item of menu; track item.ruta) {
+      <li>
+        <a [routerLink]="item.ruta" routerLinkActive="activo">{{ item.etiqueta }}</a>
+      </li>
+    }
+  </ul>
+</nav>
+
+<main class="contenido">
+  <router-outlet />
+</main>
